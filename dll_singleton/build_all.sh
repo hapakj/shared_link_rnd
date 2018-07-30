@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+
+INLINED=FALSE LIB_TYPE=STATIC ./build.sh
+INLINED=TRUE  LIB_TYPE=STATIC ./build.sh
+INLINED=FALSE LIB_TYPE=SHARED ./build.sh
+INLINED=TRUE  LIB_TYPE=SHARED ./build.sh
+
